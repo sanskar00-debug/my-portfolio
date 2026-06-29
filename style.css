@@ -18,6 +18,10 @@ header {
     padding: 40px 20 px;
 }
 
+header h1 {
+    font-size: clamp(20px,  5vw,  40px);
+}
+
 nav {
     background-color: #2e86ab;
     text-align: center;
@@ -103,6 +107,10 @@ section {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+.goals-list li:hover {
+    background-color: black;
+}
+
 /* CONTACT STYLING */
 .contact-box {
     background-color: #a8dadc;
@@ -139,4 +147,83 @@ footer {
     /* ADD YOUR NEW LINE */
 }
 
-   
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* TABLETS */
+@media (max-width: 1024px) {
+    .hobby-box {
+        flex-wrap: wrap;
+    }
+}
+
+/* PHONES */
+@media ( max-width: 768px) {
+    .hobby-box {
+        flex-direction: column;
+    }
+}
+
+   /* Small Phones */
+   @media (max-width: 480px) {
+    header h1 {
+        font-size: 22px;
+    }
+   }
+
+   .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3,  1fr);
+    gap: 15px;
+   }
+
+   .skill-box {
+    background-color: #2e86ab;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+   }
+
+   .skill-box:hover {
+    background-color: black;
+   }
+
+   @media (max-width:768px) {
+    .skills-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+   }
+
+   .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto);
+    gap: 15px;
+   }
+
+   .project-box {
+    background-color: #2e86ab;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+   }
+
+   .project-box a {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #2b67b4;
+    color: white;
+    padding: 8px  16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+   }
+
+   .project-box a:hover {
+    background-color: #2e86ab;
+   }
