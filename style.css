@@ -29,16 +29,35 @@ body {
         100%  {transform: scale(1); }
     }
 
+    @keyframes slidedown {
+        from{
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes bounce {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-20px); }
+        100% { transform: translateY(0); }
+    }
+
 header {
     background-color: #2e86ab;
     color: white;
     text-align: center;
     padding: 40px 20 px;
     animation: fadeIn 1s ease;
+    animation: slidedown 1s ease;
 }
 
 header h1 {
     font-size: clamp(20px,  5vw,  40px);
+    animation: bounce 1s infinite;
 }
 
 nav {
@@ -56,6 +75,8 @@ nav a {
 
 nav a:hover {
     color:#2e86ab;
+    transition: background-color 0.3s ease;
+
 }
 
 main {
@@ -132,6 +153,8 @@ section {
 
 .goals-list li:hover {
     background-color: #1e3a5f;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
 }
 
 /* CONTACT STYLING */
@@ -239,6 +262,7 @@ img{
     text-align: center;
     border-radius: 8px;
     font-weight: bold;
+    transition: all 0.3s ease;
    }
 
    .project-box a {
@@ -250,8 +274,10 @@ img{
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    transform: scale(1.05);
    }
 
    .project-box a:hover {
-    background-color: #2e86ab;
+    background-color: #2b67b4;
+    box-shadow: #1e3a5f;
    }
