@@ -11,11 +11,30 @@ body {
     color: #333;
 }
 
+ /*  DEFINE The Animation  */
+   @keyframes fadeIn {
+        from{
+            opacity: 0;
+            transform: translateY(20);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes pulse {
+        0%    {transform:scale(1); }
+        50%   {transform: scale(1.05); }
+        100%  {transform: scale(1); }
+    }
+
 header {
     background-color: #2e86ab;
     color: white;
     text-align: center;
     padding: 40px 20 px;
+    animation: fadeIn 1s ease;
 }
 
 header h1 {
@@ -41,6 +60,7 @@ nav a:hover {
 
 main {
     padding: 30px 50px;
+    animation: fadeIn 1.5s ease;
 }
 
 h2 {
@@ -78,17 +98,19 @@ section {
 }
 
 .hobby-item {
-    background-color: #2e86ab;
+    background-color: #3498db;
     color:white;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
     font-weight: bold;
     flex: 1;
+    transition: background-color 0.3s ease;    /*  ADD THIS  */
 }
 
 .hobby-item:hover {
-    background-color: black;
+    background-color: #1e3a5f;
+    transform: translateY(-5px);
 }
 
 /* GOALS STYLING */
@@ -105,10 +127,11 @@ section {
     border-radius: 5px;
     font-weight: bold;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
 .goals-list li:hover {
-    background-color: black;
+    background-color: #1e3a5f;
 }
 
 /* CONTACT STYLING */
@@ -133,6 +156,8 @@ button {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
 }
 
 button:hover {
@@ -186,10 +211,13 @@ img{
     text-align: center;
     border-radius: 8px;
     font-weight: bold;
+    transition: all 0.3s ease;
    }
 
    .skill-box:hover {
-    background-color: black;
+    background-color: #1e3a5f;
+    transform: scale(1.05);
+    cursor: pointer;
    }
 
    @media (max-width:768px) {
