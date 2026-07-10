@@ -39,7 +39,7 @@ if (Marks >= 90) {
     console.log("Grade: F  ")
 }
 
-// Your marks from your rael subject!
+// Your marks from your real subject!
 let tocMarks = 50
 let ooadMarks = 52
 
@@ -49,41 +49,43 @@ if (tocMarks >= 50) {
     console.log(`TOC: Failed  (${tocMarks} marks)`)
 }
 
-// DEFINING the function ( teaching the trick )
-function sayHello() {
-    console.log("Hello! ")
-    console.log("Welcome to my portfolio!")
+// Function 1 - introduce yourself
+function introduce() {
+    let name = "Sanskar"
+    let city = "Yavatmal"
+    let dream = "Data Scientist"
+    console.log(`Hi! I'm ${name} from ${city}`)
+    console.log(`I want to become a ${dream}!`)
 }
 
-// CALLING the function ( using the trick)
-sayHello()   // Hello! 
-sayHello()   // Hello! 
+introduce()
 
-// Functions with INPUTS 
-function greet(name) {
-    console.log(`Hello ${name}! Welcome! `)
-}
-greet("Sanskar")
-greet("Chikku")
-greet("Sanskar Muneshwar")
-
-// Functions that give back answers
-function addNumbers(a, b) {
-    return a + b
-}
-
-let result = addNumbers(10, 5)
-console.log(result)   // 15
-
-// Real example:
-function calculateAge(birthYear) {
-    return 2026 - birthYear
+// Function 2 - grade calculator
+function getGrade(marks) {
+    if (marks >= 90) {
+        return "A+"
+    } else if (marks >= 80) {
+        return "A"
+    } else if (marks >= 70) {
+        return "B"
+    } else if (marks >= 60) {
+        return "C"
+    } else {
+        return "F"
+    }
 }
 
-let MYAGE = calculateAge(2004)
-console.log(`I am ${MYAGE} years old`)  // I am 22 years old
+console.log(`OOAD: ${getGrade(50)}`)
+console.log(`TOC: ${getGrade(72)}`)
+console.log(`Maths: ${getGrade(85)}`)
 
-// Arrow way 
-const multiply = (a, b) => a * b
-
-console.log(multiply(5, 3))   
+// Function 3 - check if passed
+function isPassed(marks) {
+    if (marks >= 50) {
+        return "Passed  "
+    } else {
+        return "Failed  "
+    }
+}
+console.log(isPassed(45))
+console.log(isPassed(72))
