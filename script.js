@@ -110,3 +110,19 @@ function greet(name) {
 greet("Sanskar")
 greet("Chikku")
 greet("Sanskar Muneshwar")
+
+// Functions that give back answers
+function addNumbers(a, b) {
+    return a + b
+}
+
+let result = addNumbers(10, 5)
+console.log(result)   // 15
+
+// Real example:
+function calculateAge(birthYear) {
+    return 2026 - birthYear
+}
+
+let MYAGE = calculateAge(2004)
+console.log(`I am ${MYAGE} years old`)  // I am 22 years old
