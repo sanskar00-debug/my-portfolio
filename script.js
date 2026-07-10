@@ -92,3 +92,14 @@ if (tocMarks >= 50) {
 } else {
     console.log(`TOC: Failed  (${tocMarks} marks)`)
 }
+
+// DEFINING the function ( teaching the trick )
+function sayHello() {
+    console.log("Hello! ")
+    console.log("Welcome to my portfolio!")
+}
+
+// CALLING the function ( using the trick)
+sayHello()   // Hello! 
+sayHello()   // Hello! 
+
