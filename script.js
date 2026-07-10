@@ -103,3 +103,10 @@ function sayHello() {
 sayHello()   // Hello! 
 sayHello()   // Hello! 
 
+// Functions with INPUTS 
+function greet(name) {
+    console.log(`Hello ${name}! Welcome! `)
+}
+greet("Sanskar")
+greet("Chikku")
+greet("Sanskar Muneshwar")
