@@ -1,58 +1,14 @@
-console.log("JavaScript is connected!")
-console.log("Hello Sanskar!")
-console.log(2 + 3)
-
-// Personal Details
-let myName = "Chikku"
-let myAge = 22
-let myCity = "Yavatmal"
-let isStudent = true
-
-console.log(myName)
-console.log(myAge)
-console.log(myCity)
-console.log(isStudent)
-
-
-
-// Text (String) - always in quotes
-let name = "Sanskar"
-let college = " Shri Shivaji's College of Engineering and Technology Akola"
-
-
-
-// Number -no quotes
+// My details
+let name = "Chikku"
 let age = 22
-let marks = 85.5
+let city = "Yavatmal"
+let dream = "Data Scientist"
 
-
-
-// Boolean -only true or false
-let isLearning = true
-let isBored = false
-
-
-
-// Nothing
-let empty = null
-
-// Math in JavaScript
-let a = 10
-let b = 3
-
-console.log(a + b)    // 13
-console.log(a - b)    // 7
-console.log(a * b)    // 30
-console.log(a / b)    // 1 (remainder!)
-
-
-
-// Joining Words
-let firstName = "Sanskar"
-let lastName  = "Muneshwar"
- 
-console.log(`My name is ${firstName} ${lastName}`)
-console.log(`I am ${myAge} year old from ${myCity}`)
+// Print them nicely
+console.log(`Hi! My name is ${name}`)
+console.log(`I am ${age} years old`)
+console.log(`I am from ${city}, India`)
+console.log(`My dream is to become a ${dream}!`)
 
 // Math
 let currentYear = 2026
@@ -126,3 +82,8 @@ function calculateAge(birthYear) {
 
 let MYAGE = calculateAge(2004)
 console.log(`I am ${MYAGE} years old`)  // I am 22 years old
+
+// Arrow way 
+const multiply = (a, b) => a * b
+
+console.log(multiply(5, 3))   
