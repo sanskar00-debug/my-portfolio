@@ -90,36 +90,50 @@ function isPassed(marks) {
 console.log(isPassed(45))
 console.log(isPassed(72))
 
-// Creating an array
-let fruits = ["Apple",  "Banana",  "Mango",  "Orange"]
-//              [0]        [1]       [2]        [3]
-// Counting STARTS at 0! (not 1!)
+// ARRAYS - My Actual Skills!
+let mySkills = ["HTML", "CSS", "JavaScript", "Python", "Flutter", "SQL", "Excel", "PowerBI", "Git"]
 
-// Reading items
-console.log(fruits[0])
-console.log(fruits[2])
-console.log(fruits.length)
+console.log("My skills:")
+console.log(mySkills)
+console.log(`I have ${mySkills.length} skills!`)
+console.log(`First skill: ${mySkills[0]}`)
+console.log(`Last skill: ${mySkills[mySkills.length - 1]}`)
 
-// ARRAY METHOD (DOING THINGS WITH LIST) :
-let skills = ["HTML",  "CSS",  "JavaScript"]
+// Add a new skill
+mySkills.push("Tableau")
+console.log(`Added Tableau! Now I have ${mySkills.length} skills!`)
 
-// ADD to end
-skills.push("Python")
-console.log(skills)   // ["HTML",  "CSS",  "JavaScript",  "Python"]
+// Check if Python exists
+console.log(`Do I know Python? ${mySkills.includes("Python")}`)
 
-// REMOVE from end
-skills.pop()
-console.log(skills)  // ["HTML",  "CSS",  "JavaScript"]
+// LOOPS - Doing Things Repeatedly!
+for (let i=0; i < 5; i++) {
+    console.log(`Count: ${1}`)
+}
 
-// ADD to beginning
-skills.unshift("Git")
-console.log(skills)  //  ["Git",   "HTML",  "CSS",  "JavaScript"]
+// Loop Through an ARRAY:
+let hobbies = ["Cricket", "Football", "Movies", "Coding"]
 
-// REMOVE from beginning
-skills.shift()
-console.log(skills)  //  ["HTML",  "CSS",  "JavaScript"]
+for (let i = 0; i < hobbies.length; i++) {
+    console.log(`Hobby ${i + 1}: ${hobbies[i]}`)
+}
 
-// Check if item EXISTS
-console.log(skills.includes("CSS"))   // True
-console.log(skills.includes("Flutter"))  // False
+// For each
+let skills = ["HTML", "CSS", "JavaScript"]
 
+skills.forEach(function(skill) {
+    console.log(`I know ${skill}!`)
+})
+
+// WHILE Loop 
+let hungry = true
+let cookiesEaten = 0
+
+while (hungry) {
+    cookiesEaten++
+    console.log(`Eating cookie #${cookiesEaten} `)
+    if (cookiesEaten === 3) {
+        hungry = false
+    }
+}
+console.log("Full now! ")
