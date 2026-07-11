@@ -89,3 +89,37 @@ function isPassed(marks) {
 }
 console.log(isPassed(45))
 console.log(isPassed(72))
+
+// Creating an array
+let fruits = ["Apple",  "Banana",  "Mango",  "Orange"]
+//              [0]        [1]       [2]        [3]
+// Counting STARTS at 0! (not 1!)
+
+// Reading items
+console.log(fruits[0])
+console.log(fruits[2])
+console.log(fruits.length)
+
+// ARRAY METHOD (DOING THINGS WITH LIST) :
+let skills = ["HTML",  "CSS",  "JavaScript"]
+
+// ADD to end
+skills.push("Python")
+console.log(skills)   // ["HTML",  "CSS",  "JavaScript",  "Python"]
+
+// REMOVE from end
+skills.pop()
+console.log(skills)  // ["HTML",  "CSS",  "JavaScript"]
+
+// ADD to beginning
+skills.unshift("Git")
+console.log(skills)  //  ["Git",   "HTML",  "CSS",  "JavaScript"]
+
+// REMOVE from beginning
+skills.shift()
+console.log(skills)  //  ["HTML",  "CSS",  "JavaScript"]
+
+// Check if item EXISTS
+console.log(skills.includes("CSS"))   // True
+console.log(skills.includes("Flutter"))  // False
+
