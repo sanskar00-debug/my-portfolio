@@ -71,7 +71,7 @@ function getGrade(marks) {
     } else if (marks >= 60) {
         return "C"
     } else {
-        return "F"
+        return "D"
     }
 }
 
@@ -81,7 +81,7 @@ console.log(`Maths: ${getGrade(85)}`)
 
 // Function 3 - check if passed
 function isPassed(marks) {
-    if (marks >= 50) {
+    if (marks >= 40) {
         return "Passed  "
     } else {
         return "Failed  "
@@ -137,3 +137,14 @@ while (hungry) {
     }
 }
 console.log("Full now! ")
+
+// Your real subjects and marks!
+let subjects = ["OOAD", "TOC", "Distributed Ledger", "Professional Ethics", "Wireless Sensor Network"]
+let marks = [50,52,45,42,47]
+
+// Loop through and show results
+for (let i = 0; i< subjects.length; i++) {
+    let grade = getGrade(marks[i])
+    let status = isPassed(marks[i])
+    console.log(`${subjects[i]}: ${marks[i]} marks Grade ${grade}  ${status}`)
+}
