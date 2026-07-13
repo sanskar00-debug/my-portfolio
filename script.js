@@ -148,3 +148,56 @@ for (let i = 0; i< subjects.length; i++) {
     let status = isPassed(marks[i])
     console.log(`${subjects[i]}: ${marks[i]} marks Grade ${grade}  ${status}`)
 }
+
+// ===== DOM MANIPULATION =====
+
+// 1. Find elements
+let title = document.getElementById("mainTitle")
+let tagline = document.getElementById("tagline")
+let btn = document.getElementById("contactBtn")
+
+// 2. Read what's there
+console.log(title.innerText)
+console.log(tagline.innerText)
+
+// 3. CHANGE the text
+title.innerText = " Hi, I'm Sanskar!"
+
+// 4. CHANGE the style
+title.style.color = "yellow"
+title.style.fontSize = "48px"
+
+// 5. CHANGE background color
+document.body.style.backgroundColor = "#1a1a2e"
+
+// Make button react to clicks!
+btn.addEventListener("click", function() {
+    alert("Thanks for clicking!  I'll contact you soon! 🙂 ")
+})
+
+let darkModeBtn = document.getElementById("darkModeBtn")
+let isDark = false
+
+darkModeBtn.addEventListener("click", function() {
+    if (isDark === false) {
+        // Turn ON dark mode
+        document.body.style.backgroundColor = "#1a1a2e"
+        document.body.style.color = "white"
+        darkModeBtn.innerText = "🌞 Light Mode"
+        isDark = true
+    } else {
+        // Turn OFF dark mode 
+        document.body.style.backgroundColor = "#f0f4f8"
+        document.body.style.color = "#333"
+        darkModeBtn.innerText = "🌙 Dark Mode"
+        isDark = false
+    }
+})
+
+// Click to reveal a fun fact about yourself!
+let aboutTitle = document.getElementById("mainTitle")
+
+aboutTitle.addEventListener("click", function(){
+    aboutTitle.innerText = " I Love Football! ⚽"
+    aboutTitle.style.color = "#333"
+})
