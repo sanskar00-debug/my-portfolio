@@ -4,280 +4,287 @@
     box-sizing: border-box;
 }
 
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
-    color: #333;
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    line-height: 1.6;
 }
 
- /*  DEFINE The Animation  */
-   @keyframes fadeIn {
-        from{
-            opacity: 0;
-            transform: translateY(20);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes pulse {
-        0%    {transform:scale(1); }
-        50%   {transform: scale(1.05); }
-        100%  {transform: scale(1); }
-    }
-
-    @keyframes slidedown {
-        from{
-            opacity: 0;
-            transform: translateY(-50px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes bounce {
-        0%   { transform: translateY(0); }
-        50%  { transform: translateY(-20px); }
-        100% { transform: translateY(0); }
-    }
-
+/* ===== HEADER ===== */
 header {
-    background-color: #2e86ab;
+    background: linear-gradient(135deg, #0d1117, #161b22);
     color: white;
     text-align: center;
-    padding: 40px 20 px;
+    padding: 80px 20px;
+    border-bottom: 1px solid #30363d;
     animation: fadeIn 1s ease;
-    animation: slidedown 1s ease;
 }
 
 header h1 {
-    font-size: clamp(20px,  5vw,  40px);
-    animation: bounce 1s infinite;
+    font-size: 52px;
+    font-weight: 700;
+    color: #58a6ff;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
 }
 
+header p {
+    font-size: 18px;
+    color: #8b949e;
+    letter-spacing: 1px;
+}
+
+/* ==== NAV ==== */
 nav {
-    background-color: #2e86ab;
+    background-color: #161b22;
     text-align: center;
     padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #30363d;
 }
 
 nav a {
-    color: white;
+    color: #8b949e;
     text-decoration: none;
     margin: 0 20px;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color:#2e86ab;
-    transition: background-color 0.3s ease;
-
+    color: #58a6ff;
 }
 
+#darkModeBtn {
+    background: transparent;
+    border: 1px solid #30363d;
+    color: #8b949e;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+#darkModeBtn:hover {
+    border-color: #58a6ff;
+    color: #58a6ff;
+}
+
+/* ===== MAIN ===== */
 main {
-    padding: 30px 50px;
-    animation: fadeIn 1.5s ease;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+section {
+    margin-bottom: 70px;
 }
 
 h2 {
-    color: #2e86ab;
-    border-bottom: 3px solid #2e86ab;
+    font-size: 28px;
+    color: #58a6ff;
+    margin-bottom: 25px;
     padding-bottom: 10px;
-    margin-bottom: 20px;
-}
- 
-section {
-    margin-bottom: 50px;
+    border-bottom: 1px solid #30363d;
+    display: block;
 }
 
-/* ABOUT ME STYLING */
+/* ===== ABOUT ===== */
 .about-card {
-    list-style:none;
-    padding: 0;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 25px;
+    color: #c9d1d9;
+    font-size: 16px;
+    line-height: 1.8;
 }
 
-.about-card p {
-    background-color:white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-bottom: 15px;
-    border-left:5px solid #2e86ab; 
-    font-weight: bold;
-}
-
-   /* FLEXBOX FOR HOBBIES */
-    .hobby-box {
+/* ===== HOBBIES ===== */
+.hobby-box {
     display: flex;
     gap: 15px;
-    width: 100%;
+    flex-wrap: wrap;
 }
 
 .hobby-item {
-    background-color: #3498db;
-    color:white;
-    padding: 20px;
+    flex: 1;
+    min-width: 120px;
+    background-color: #161b22;
+    color: #58a6ff;
+    padding: 15px 20px;
     border-radius: 8px;
     text-align: center;
-    font-weight: bold;
-    flex: 1;
-    transition: background-color 0.3s ease;    /*  ADD THIS  */
+    font-weight: 600;
+    border: 1px solid #30363d;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .hobby-item:hover {
-    background-color: #1e3a5f;
-    transform: translateY(-5px);
+    border-color: #58a6ff;
+    background-color: #1f2937;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(88, 166, 255, 0.2);
 }
 
-/* GOALS STYLING */
+/* ===== SKILLS ===== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.skill-box {
+    background-color: #161b22;
+    color: #c9d1d9;
+    padding: 15px 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    border: 1px solid #30363d;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-box:hover {
+    border-color: #58a6ff;
+    color: #58a6ff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(88, 166, 255, 0.15);
+}
+
+/* ==== PROJECTS ==== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-box {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 25px;
+    transition: all 0.3s ease;
+}
+
+.project-box:hover {
+    border-color: #58a6ff;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(88, 166, 255, 0.15);
+}
+
+.project-box h3 {
+    color: #58a6ff;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.project-box p {
+    color: #8b949e;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.project-box a {
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 10px;
+    background-color: transparent;
+    color: #58a6ff;
+    padding: 6px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #58a6ff;
+    transition: all 0.3s ease;
+}
+
+.project-box a:hover {
+    background-color: #58a6ff;
+    color: #0a0a0a;
+}
+
+/* ==== GOALS ==== */
 .goals-list {
     list-style: none;
     padding: 0;
 }
 
 .goals-list li {
-    background-color: white;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-left: 5px solid #2e86ab;
-    border-radius: 5px;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #161b22;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+    border-left: 3px solid #58a6ff;
+    color: #c9d1d9;
+    font-weight: 500;
     transition: all 0.3s ease;
+    border-top: 1px solid #30363d;
+    border-right: 1px solid #30363d;
+    border-bottom: 1px solid #30363d;
 }
 
 .goals-list li:hover {
-    background-color: #1e3a5f;
-    transform: translateY(20px);
-    transition: all 0.3s ease;
+    background-color: #1f2937;
+    transform: translateX(5px);
+    color: #58a6ff;
 }
 
-/* CONTACT STYLING */
+/* ==== CONTACT ==== */
 .contact-box {
-    background-color: #a8dadc;
-    color: white;
-    padding: 30px;
+    background-color: #161b22;
+    border: 1px solid #30363d;
     border-radius: 10px;
+    padding: 40px;
     text-align: center;
 }
 
 .contact-box p {
-    margin-bottom: 15px;
-    font-size: 18px;
-} 
+    color: #8b949e;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
 
 button {
-    background-color: #2e86ab;
+    background-color: #238636;
     color: white;
     border: none;
-    padding: 12px 25px;
-    font-size: 16px;
-    border-radius: 5px;
+    padding: 12px 28px;
+    font-size: 15px;
+    border-radius: 6px;
     cursor: pointer;
+    font-weight: 600;
     transition: all 0.3s ease;
-    animation: pulse 2s infinite;
 }
 
 button:hover {
-    background-color: #2e86ab;
+    background-color: #2ea043;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(35, 134, 54, 0.4 );
 }
 
+/* ==== FOOTER ==== */
 footer {
-    background-color: #2e86ab;
-    color: white;
+    background-color: #161b22;
+    color: #8b949e;
     text-align: center;
-    padding: 15px;
-    /* ADD YOUR NEW LINE */
-}
-
-img{
-    max-width: 100%;
-    height: auto;
-}
-
-/* TABLETS */
-@media (max-width: 1024px) {
-    .hobby-box {
-        flex-wrap: wrap;
-    }
-}
-
-/* PHONES */
-@media ( max-width: 768px) {
-    .hobby-box {
-        flex-direction: column;
-    }
-}
-
-   /* Small Phones */
-   @media (max-width: 480px) {
-    header h1 {
-        font-size: 22px;
-    }
-   }
-
-   .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3,  1fr);
-    gap: 15px;
-   }
-
-   .skill-box {
-    background-color: #2e86ab;
-    color: white;
     padding: 25px;
-    text-align: center;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-   }
+    border-top: 1px solid #30363d;
+    font-size: 14px;
+}
 
-   .skill-box:hover {
-    background-color: #1e3a5f;
-    transform: scale(1.05);
-    cursor: pointer;
-   }
-
-   @media (max-width:768px) {
-    .skills-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-   }
-
-   .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto);
-    gap: 15px;
-   }
-
-   .project-box {
-    background-color: #2e86ab;
-    color: white;
-    padding: 25px;
-    text-align: center;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-   }
-
-   .project-box a {
-    display: inline-block;
-    margin-top: 15px;
-    background-color: #2b67b4;
-    color: white;
-    padding: 8px  16px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transform: scale(1.05);
-   }
-
-   .project-box a:hover {
-    background-color: #2b67b4;
-    box-shadow: #1e3a5f;
-   }
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
