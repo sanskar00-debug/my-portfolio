@@ -199,5 +199,7 @@ let aboutTitle = document.getElementById("mainTitle")
 
 aboutTitle.addEventListener("click", function(){
     aboutTitle.innerText = " I Love Football! ⚽"
-    aboutTitle.style.color = "#333"
+    aboutTitle.style.color = "#fff"
 })
+
+
