@@ -202,4 +202,69 @@ aboutTitle.addEventListener("click", function(){
     aboutTitle.style.color = "#fff"
 })
 
+// ===== FORM HANDLING =====
+
+let nameInput = document.getElementById("nameInput")
+let emailInput = document.getElementById("emailInput")
+let messageInput = document.getElementById("messageInput")
+let formMessage = document.getElementById("formMessage")
+let contactBtn = document.getElementById("contactBtn")
+
+// Real-time Validation as user types
+nameInput.addEventListener("input", function() {
+    if (nameInput.value.length > 0) {
+        nameInput.style.borderColor = "#58a6ff"
+    } else {
+        nameInput.style.borderColor = "#30363d"
+    }
+})
+
+emailInput.addEventListener("input", function() {
+    if (emailInput.value.includes("@")) {
+        emailInput.style.borderColor = "#3fb950"
+    } else {
+        emailInput.style.borderColor = "#f85149"
+    }
+})
+
+// Form Submission
+contactBtn.addEventListener("click", function() {
+    let name = nameInput.value.trim()
+    let email = emailInput.value.trim()
+    let message = messageInput.value.trim()
+
+    // Check if fields are empty
+    if (name === "") {
+        formMessage.innerText = "❌ Please enter your name!"
+        formMessage.style.color = "#f85149"
+        nameInput.focus()
+        return
+    } 
+     if (email === "" || !email.includes("@")) {
+        formMessage.innerText = "❌ Please enter a valid email"
+        formMessage.style.color = "#f85149"
+        emailInput.focus()
+        return
+     }
+     if (message === "") {
+        formMessage.innerText = "❌ Please write a message!"
+        formMessage.style.color = "f85149"
+        messageInput.focus()
+        return
+     }
+
+     // All fields Valid!
+     formMessage.innerText = `✅ Thanks ${name}! Message sent Successfully!`
+     formMessage.style.color = "#3fb950"
+
+     // Clear the form
+     nameInput.value = ""
+     emailInput.value = ""
+     messageInput.value = ""
+
+     // Reset border colors
+     nameInput.style.borderColor = "#30363d"
+     emailInput.style.borderColor = "#30363d"
+})
+
 
