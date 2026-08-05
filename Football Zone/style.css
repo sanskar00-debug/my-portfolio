@@ -198,7 +198,7 @@ button:hover {
     background-color: #0d1117;
     border: 1px solid #30363d;
     border-radius: 6px;
-    color: #c9d1d9;
+    color: #e0e0e0;
     font-size: 15px;
     font-family: 'Segoe UI', sans-serif;
     transition: border-color 0.3s ease;
@@ -207,7 +207,7 @@ button:hover {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: wheat;
+    border-color: #e0e0e0;
 }
 
 .form-group input::placeholder,
@@ -225,7 +225,7 @@ button:hover {
 /* ==== FOOTER ==== */
 footer {
     background-color: #161b22;
-    color: #8b949e;
+    color: #e0e0e0;
     text-align: center;
     padding: 25px;
     border-top: 1px solid #30363d;
