@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanskar's Dashboard ✏️</title>
+    <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+     <div class="topbar">
+        <div class="topbar-left">
+        <h1> 👋 Welcome, Sanskar!</h1>
+        <p id="dateDisplay">Loading date....</p>
+     </div>
+     <div class="topbar-right">
+        <div class="clock" id="clockDisplay">00:00:00</div> 
+     </div>
+ </div>
+
+ <!-- DASHBOARD GRID -->
+  <div class="dashboard-grid">
+
+    <!-- PROFILE CARD -->
+     <div class="card profile-card">
+        <div class="card-header"> 🙍🏻‍♂️ My Profile</div>
+        <div class="profile-info">
+            <div class="profile-avatar">S</div>
+            <div class="profile-details">
+                <h2>Sanskar Muneshwar</h2>
+                <p>🎓 Computer Science Engineering</p>
+                <p>📍 Yavatmal, India</p>
+                <p>🎯 Aspiring Data Scientist</p>
+                <p>💼 Flutter Mobile App Development Intern @ Excelerate</p>
+            </div>
+        </div>
+
+        <div class="profile-stats">
+           <div class="stats">
+               <span class="stat-number">10+</span>
+               <span class="stat-label">Skills</span>
+           </div>
+
+        <div class="stat">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat">
+            <span class="stat-number">1</span>
+            <span class="stat-label">Internship</span>
+       </div>
+    </div>
+ </div>
+
+ <!-- WEATHER CARD -->
+  <div class="card weather-card">
+    <div class="card-header">🌤️ Weather - Yavatmal</div>
+    <div id="weatherContent">
+        <div class="loading">Loading weather....</div>
+    </div>
+  </div>
+
+  <!-- CLOCK & DATE CARD -->
+   <div class="card quote-card">
+    <div class="card-header">💭 Quote of the day</div>
+    <div id="quoteContent">
+        <div class="loading">Loading quote...</div>
+    </div>
+    <button class="refresh-btn" id="newQuoteBtn">
+        New Quote 🔁
+    </button>
+   </div>
+
+   <!-- TODO CARD -->
+    <div class="card todo-card">
+        <div class="card-header">✅ My Todo List</div>
+        <div class="todo-input-box">
+            <input
+               type="text"
+               id="todoInput"
+               placeholder="Add a new task..." />
+               <button id="addTodoBtn">Add ✚</button>
+        </div>
+        <ul class="todo-list" id="todoList"></ul>
+    </div>
+
+    <!-- NOTES CARD -->
+     <div class="card skills-card">
+        <div class="card-header">🛠️ My Skills</div>
+        <div class="skills-list">
+            <span class="skill-tag html">HTML</span>
+            <span class="skill-tag css">CSS</span>
+            <span class="skill-tag js">JavaScript</span>
+            <span class="skill-tag python">Python</span>
+            <span class="skill-tag flutter">Flutter</span>
+            <span class="skill-tag sql">SQL</span>
+            <span class="skill-tag excel">Excel</span>
+            <span class="skill-tag powerbi">PowerBI</span>
+            <span class="skill-tag tableau">Tableau</span>
+            <span class="skill-tag git">Git</span>
+        </div>
+     </div>
+
+    </div>
+    <script src="config.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

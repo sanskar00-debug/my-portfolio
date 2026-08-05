@@ -1,0 +1,233 @@
+/* Dark theme start */
+body {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', sans-serif;
+}
+ 
+header {
+    background: linear-gradient(auto);
+    color: #e0e0e0
+}
+
+header h1 {
+    font-size: medium;
+    color: #e0e0e0;
+    letter-spacing: normal;
+    margin-bottom: auto;
+    text-align: center;
+    animation: fadein 0.3s ease;
+    border: 1px solid #30363d;
+}
+
+ 
+nav {
+    background-color: #161b22;
+    color: #e0e0e0;
+    padding: 20px;
+    text-align: center;
+    position: static;
+    z-index: 100% ;
+    border-bottom: 1px solid #0a0a0a;
+    border: 1px solid #30363d;
+
+
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 400;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #58a6ff;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+} 
+
+section {
+    margin-bottom: 70px;
+}
+
+h2 {
+    font-size: auto;
+    color: #e0e0e0;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    display: block;
+    border-bottom: 1px solid #0a0a0a;
+}
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.players-box {
+    background-color: #0a0a0a;
+    border: 1px solid #58a6ff;
+    padding: 30px;
+    border-radius: 15px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 0 10px;
+    margin-bottom: 15px;
+}
+
+.player-card {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    border: 1px solid #58a6ff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 0 20px;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+
+ 
+.players-box:hover {
+    color: #58a6ff;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(88, 166, 255, 0.15);
+}
+
+.favourite-box {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    color: #e0e0e0;
+}
+
+.favourite-item {
+    flex: 1;
+    min-width: 120px;
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    padding: 20px 25px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid #161b22;
+}
+
+.favourite-item:hover {
+    border-color: #58a6ff;
+    background-color: #0a0a0a;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(88, 166, 255, 0.2);
+}
+
+.team-list {
+    list-style: none;
+    padding: 0;
+}
+
+.team-list li {
+    background-color: #161b22;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+    border-left: 3px solid #58a6ff;
+    color: #c9d1d9;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-top: 1px solid #30363d;
+    border-right: 1px solid #30363d;
+    border-bottom: 1px solid #30363d;
+}
+
+.team-list li:hover {
+    background-color: #0a0a0a;
+    color: #58a6ff;
+    transform: translateX(5px);
+}
+
+.contact-box {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+}
+
+.contact-box p {
+    color: #8b949e;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #238636;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #2ea043;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(35, 134, 54, 0.4 );
+}
+
+/* FORM STYLING */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: #c9d1d9;
+    font-size: 15px;
+    font-family: 'Segoe UI', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: wheat;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #484f58;
+}
+
+#formMessage {
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    min-height: 20px;
+}
+
+/* ==== FOOTER ==== */
+footer {
+    background-color: #161b22;
+    color: #8b949e;
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #30363d;
+    font-size: 14px;
+}
