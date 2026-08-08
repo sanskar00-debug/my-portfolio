@@ -86,7 +86,33 @@
                   </div>
 
                   <!-- 3. Rating Calculator -->
-                   <div class
+                   <div class="calculator-container">
+                    <h3>Rating Calculator</h3>
+                    <p>Enter performance weights (0-100) to find the player's overall dynamic score:</p>
+                    <div class="calc-form">
+                        <div class="form-group">
+                            <label for="weightGoals">Goals Weight:</label>
+                            <input type="number" id="weightGoals" min="0" max="100" placeholder="e.g., 50" />
+                        </div>
+                        <div class="form-group">
+                            <label for="weightAssits">Assists Weight:</label>
+                            <input type="number" id="weightAssits" min="0" max="100" placeholder="e.g., 30" />
+                        </div>
+                        <div class="form-group">
+                            <label for="weightSpeeds">Speed Weight:</label>
+                            <input type="number" id="weightSpeed" min="0" max="100" placeholder="e.g., 20" />
+                        </div>
+                        <button id="calculateBtn">Calculate Rating</button>
+                    </div>
+                   </div>
+
+                   <!-- 4. Results section -->
+                    <div class="results-container">
+                        <h3>Calculated Output</h3>
+                        <div id="resultsDisplay">
+                        <p class="placeholder-text">Configure the weights above and click calculate.</p> 
+                    </div>
+                    </div>
              </section>
         </main>
 
