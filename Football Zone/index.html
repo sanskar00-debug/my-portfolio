@@ -114,6 +114,56 @@
                     </div>
                     </div>
              </section>
+             <!-- IINTERACTIVE FAN CHEER WALL -->
+              <section id="fan-zone">
+                <h2>📣 Fan Zone: Cheer Board</h2>
+                <p class="section-subtitle">Leave a Live message for your favourite football stars!</p>
+
+                <div class="fanzone-container">
+                    <!-- Form Side -->
+                     <div class="cheer-form-box">
+                        <h3>Write a Cheer</h3>
+
+                        <div class="form-group">
+                            <label for="fanName">Your Nickname:</label>
+                            <input type="text" id="fanName" placeholder="e.g., Striker7" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cheerPlayer">Select Player:</label>
+                            <select id="cheerPlayer">
+                                <option value="Cristiano Ronaldo">Cristiano Ronaldo</option>
+                                <option value="Neymar">Neymar</option>
+                                <option value="Kylian Mbappe">Kylian Mbappe</option>
+                                <option value="Erling Haaland">Erling Haaland</option>
+                                <option value="Others">Other Team / Player</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="fanMessage">Your Message:</label>
+                            <textarea id="fanMessage" placeholder="Ronaldo is the Goat! SIUUUUU...." rows="3" required></textarea>
+                        </div>
+                        <button id="postCheerBtn">⚡ Post to Wall</button>
+                     </div>
+
+                     <!-- Live Wall Side -->
+                      <div class="cheer-wall-box">
+                        <h3>Live Fan Feed</h3>
+                        <div id="liveCheerFeed">
+                            <!-- Pre-loaded sample cheers to show how it looks -->
+                             <div class="cheer-card ronaldo-theme">
+                                <h4>CR7_Fanatic <span>⚽ Shoutout to Cristiano Ronaldo</span></h4>
+                                <p>"Best to ever do it. Five Ballon d'Ors say it all!"</p>
+                             </div>
+                             <div class="cheer-card neymar-theme">
+                                <h4>JogaBonito92 <span> Shoutout to Neymar</span></h4>
+                                <p>"the dribbling skills are unmatched. Pure joy to watch."</p>
+                             </div>
+                        </div>
+                      </div>
+                </div>
+              </section>
         </main>
 
         <footer>
