@@ -3,23 +3,27 @@ body {
     background-color: #0a0a0a;
     color: #e0e0e0;
     font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
 }
  
 header {
-    background: linear-gradient(auto);
-    color: #e0e0e0
+    background: #161b22; /* Fixed invalid gradient */
+    color: #e0e0e0;
+    padding: 10px 0;
 }
 
 header h1 {
-    font-size: medium;
+    font-size: 24px; /* Fixed from medium */
     color: #e0e0e0;
     letter-spacing: normal;
-    margin-bottom: auto;
+    margin: 10px auto;
     text-align: center;
-    animation: fadein 0.3s ease;
     border: 1px solid #30363d;
+    display: inline-block;
+    padding: 10px 20px;
+    width: fit-content;
 }
-
  
 nav {
     background-color: #161b22;
@@ -27,11 +31,9 @@ nav {
     padding: 20px;
     text-align: center;
     position: static;
-    z-index: 100% ;
+    z-index: 10; /* Fixed invalid percentage */
     border-bottom: 1px solid #0a0a0a;
     border: 1px solid #30363d;
-
-
 }
 
 nav a {
@@ -50,7 +52,7 @@ nav a:hover {
 main {
     max-width: 900px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 40px 20px;
 } 
 
 section {
@@ -58,12 +60,12 @@ section {
 }
 
 h2 {
-    font-size: auto;
+    font-size: 28px; /* Fixed from auto */
     color: #e0e0e0;
     margin-bottom: 25px;
     padding-bottom: 10px;
     display: block;
-    border-bottom: 1px solid #0a0a0a;
+    border-bottom: 1px solid #30363d;
 }
 
 .players-grid {
@@ -76,30 +78,32 @@ h2 {
     background-color: #0a0a0a;
     border: 1px solid #58a6ff;
     padding: 30px;
-    border-radius: 15px;
-    font-weight: 600;
     text-align: center;
     border-radius: 0 10px;
     margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .player-card {
-    background-color: #0a0a0a;
+    background-color: #161b22; /* Changed to block color to stand out */
     color: #e0e0e0;
-    border: 1px solid #58a6ff;
+    border: 1px solid #30363d;
     padding: 20px;
     margin-bottom: 15px;
-    border: 0 20px;
+    border-radius: 8px; /* Fixed broken syntax */
     transition: all 0.2s ease;
     text-align: center;
 }
 
+.player-card h2 {
+    font-size: 20px;
+    border-bottom: none;
+    margin-top: 0;
+}
 
- 
-.players-box:hover {
-    color: #58a6ff;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(88, 166, 255, 0.15);
+.player-card:hover {
+    border-color: #58a6ff;
+    transform: translateY(-3px);
 }
 
 .favourite-box {
@@ -152,6 +156,166 @@ h2 {
     background-color: #0a0a0a;
     color: #58a6ff;
     transform: translateX(5px);
+}
+
+/* =================================================== */
+/* NEW STYLES: INTERACTIVE FAN ZONE CHEER BOARD       */
+/* =================================================== */
+.section-subtitle {
+    color: #8b949e;
+    margin-top: -15px;
+    margin-bottom: 25px;
+}
+
+.fanzone-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.cheer-form-box, .cheer-wall-box {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.cheer-form-box h3, .cheer-wall-box h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #58a6ff;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #c9d1d9;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #0a0a0a;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: #e0e0e0;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: #58a6ff;
+    outline: none;
+}
+
+#postCheerBtn {
+    width: 100%;
+    background-color: #238636;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#postCheerBtn:hover {
+    background-color: #2ea043;
+}
+
+#liveCheerFeed {
+    max-height: 320px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.cheer-card {
+    background-color: #0a0a0a;
+    border: 1px solid #30363d;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.cheer-card h4 {
+    margin: 0 0 8px 0;
+    font-size: 15px;
+    color: #58a6ff;
+}
+
+.cheer-card h4 span {
+    font-size: 12px;
+    color: #8b949e;
+    font-weight: normal;
+    display: block;
+}
+
+.cheer-card p {
+    margin: 0;
+    font-style: italic;
+    color: #c9d1d9;
+}
+
+/* Custom Individual Player Accent Highlights */
+.ronaldo-theme { border-left: 4px solid #daa520; }
+.neymar-theme { border-left: 4px solid #2ea043; }
+
+/* =================================================== */
+/* NEW STYLES: PLAYER DATABASE & CALCULATOR            */
+/* =================================================== */
+#player-hub {
+    margin-top: 50px;
+}
+
+.search-container, .stats-container, .calculator-container, .results-container {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px;
+    background-color: #0a0a0a;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: white;
+}
+
+.search-box button, #calculateBtn {
+    background-color: #1f6feb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.search-box button:hover, #calculateBtn:hover {
+    background-color: #388bfd;
+}
+
+.placeholder-text {
+    color: #8b949e;
+    font-style: italic;
 }
 
 /* ==== FOOTER ==== */
