@@ -327,3 +327,191 @@ footer {
     border-top: 1px solid #30363d;
     font-size: 14px;
 }
+
+/* 1. Futuristic Background & Glassmorphism */
+body {
+    background: radial-gradient(circle at top right, #1a1a2e, #0a0a0a); /* Deep depth gradient */
+    color: #e0e0e0;
+    font-family: 'Inter', 'Segoe UI', sans-serif; /* Modern cleaner font */
+    line-height: 1.6;
+}
+
+/* 2. Glow Effect for Title */
+header h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #58a6ff, #bc85ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
+    border: none; /* Removed the old border for a cleaner look */
+    margin-top: 40px;
+}
+
+/* 3. Glassmorphic Player Cards */
+.player-card {
+    background: rgba(22, 27, 34, 0.6); /* Translucent */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 20px;
+    padding: 30px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.player-card:hover {
+    transform: scale(1.05) rotate(1deg); /* Pop-out effect */
+    border-color: #58a6ff;
+    background: rgba(22, 27, 34, 0.8);
+}
+
+/* 4. Neon Accents for the Fan Zone */
+.cheer-form-box, .cheer-wall-box {
+    background: rgba(13, 17, 23, 0.8);
+    border: 1px solid #30363d;
+    box-shadow: inset 0 0 15px rgba(88, 166, 255, 0.05);
+}
+
+/* Glowing Post Button */
+#postCheerBtn {
+    background: linear-gradient(45deg, #238636, #2ea043);
+    box-shadow: 0 4px 15px rgba(35, 134, 54, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#postCheerBtn:hover {
+    box-shadow: 0 0 25px rgba(46, 160, 67, 0.6);
+}
+
+/* 5. Modern Animated Navigation */
+nav a {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #58a6ff;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+/* --- High-End Search Box Styling --- */
+.search-wrapper {
+    display: flex;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 10px;
+    border-radius: 50px; /* Pill shape for a modern look */
+    border: 1px solid rgba(88, 166, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+}
+
+.search-wrapper:focus-within {
+    border-color: #58a6ff;
+    box-shadow: 0 0 25px rgba(88, 166, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.search-input-group {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding-left: 15px;
+}
+
+.search-icon {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    opacity: 0.6;
+}
+
+.search-wrapper input {
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    font-size: 1rem;
+    color: #fff;
+    width: 100%;
+}
+
+#searchBtn {
+    background: linear-gradient(135deg, #58a6ff 0%, #005cc5 100%);
+    border-radius: 40px;
+    padding: 10px 25px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#searchBtn:hover {
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px #58a6ff;
+}
+
+/* --- Advanced Hover Animations for Player Cards --- */
+.player-card {
+    position: relative;
+    overflow: hidden; /* Clips the inner glow */
+    background: rgba(22, 27, 34, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* The "Pulse" Hover Effect */
+.player-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: #58a6ff;
+    background: rgba(30, 35, 45, 0.9);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 
+                0 0 15px rgba(88, 166, 255, 0.2);
+}
+
+/* Subtle Animated Border for Card Headers */
+.player-card h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.player-card h2::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #58a6ff;
+    transition: width 0.4s ease;
+}
+
+.player-card:hover h2::after {
+    width: 100%;
+}
+
+/* Smooth Scrollbar for the Live Feed */
+#liveCheerFeed::-webkit-scrollbar {
+    width: 6px;
+}
+
+#liveCheerFeed::-webkit-scrollbar-thumb {
+    background: #30363d;
+    border-radius: 10px;
+}
+
+#liveCheerFeed::-webkit-scrollbar-thumb:hover {
+    background: #58a6ff;
+}

@@ -164,7 +164,7 @@ console.log(tagline.innerText)
 title.innerText = " Hi, I'm Sanskar!"
 
 // 4. CHANGE the style
-title.style.color = "yellow"
+title.style.color = "#58a6ff"
 title.style.fontSize = "48px"
 
 // 5. CHANGE background color
