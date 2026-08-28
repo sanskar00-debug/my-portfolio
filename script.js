@@ -161,7 +161,7 @@ console.log(title.innerText)
 console.log(tagline.innerText)
 
 // 3. CHANGE the text
-title.innerText = " Hi, I'm Sanskar!"
+title.innerText = " Hi, I'm Sanskar Muneshwar"
 
 // 4. CHANGE the style
 title.style.color = "#58a6ff"
