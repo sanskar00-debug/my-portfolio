@@ -17,12 +17,7 @@ This is my personal portfolio website — built completely from scratch while le
 - My Projects
 - My Goals
 - Contact
-- Dashboard
-
-## 🎯 Featured Projects
-- **Green AI Paradox** — Research seminar on sustainability challenges in AI systems.
-- **Excelerate Pathfinder** — Mobile learning & tutoring app built with Flutter during my internship.
-- **Web Development Quiz** — MCQ type question based quiz dashboard.   
+     
 
 ## 🚀 What I'm Learning Next
 - Data Science fundamentals
