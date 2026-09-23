@@ -12,10 +12,9 @@ This is my personal portfolio website — built completely from scratch while le
 
 ## 📂 Sections Included
 - About Me
-- My Hobbies
-- My Skills
-- My Projects
-- My Goals
+- Skills
+- Projects
+- Certificates
 - Contact
      
 
