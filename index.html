@@ -1,161 +1,394 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Sanskar's Portfolio</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanskar Muneshwar — Data Engineer & Analyst</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
 
-    <body>
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">SM</span>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certs</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="theme-btn" id="themeBtn">☀️</button>
+    </div>
+  </nav>
 
-        <header>
-            <h1 id="mainTitle"> Hi, I'm Sanskar Muneshwar</h1>
-            <p id="tagline">"Aspiring Data Scientist | Data Analyst"</p>
-        </header>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">Open to opportunities</div>
+      <h1 class="hero-name">Sanskar<br/>Muneshwar</h1>
+      <div class="hero-roles">
+        <span class="role-tag">Data Engineer</span>
+        <span class="role-sep">·</span>
+        <span class="role-tag">Data Analyst</span>
+        <span class="role-sep">·</span>
+        <span class="role-tag">Flutter Developer</span>
+      </div>
+      <p class="hero-bio">CS Engineering student building intelligent, data-driven systems — from real-time IoT pipelines to interactive BI dashboards and production mobile apps.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">7+</span>
+          <span class="stat-lbl">Projects</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">5</span>
+          <span class="stat-lbl">Certificates</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">2</span>
+          <span class="stat-lbl">Internships</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">1</span>
+          <span class="stat-lbl">Hackathon</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">scroll ↓</div>
+  </section>
 
-        <nav>
-            <a href="#about">About</a>
-            <a href="#hobbies">Hobbies</a>
-            <a href="#goals">Goals</a>
-            <a href="#contact">Contact</a>
-            <button id="darkModeBtn"> 🌙 Dark Mode</button>
-        </nav>
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-avatar">
+          <div class="avatar-circle">S</div>
+          <div class="avatar-info">
+            <p class="mono">Sanskar Muneshwar</p>
+            <p class="subtle">Yavatmal, India 🇮🇳</p>
+            <p class="subtle">College of Engineering & Technology</p>
+          </div>
+        </div>
+        <div class="about-text">
+          <p>I'm a Computer Science Engineering student with a passion for understanding how data moves, transforms, and creates value. My work spans the full data stack — from designing relational schemas and streaming pipelines to building interactive dashboards that help businesses make smarter decisions.</p>
+          <p>As a <strong>Star Performer</strong> in the Excelerate Flutter internship (powered by Saint Louis University), I contributed to building Excelerate Pathfinder — a production tutoring app. I also built EcoRoute AI for a hackathon, using IoT data and predictive routing to cut carbon emissions by 30%.</p>
+          <p>Currently deepening my expertise in Python-based ML pipelines, advanced SQL, and cloud-native data engineering patterns.</p>
+          <div class="about-tags">
+            <span>Python</span><span>SQL</span><span>PowerBI</span>
+            <span>Flutter</span><span>Tableau</span><span>Git</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <main>
-            <section id="about">
-                <h2>About Me</h2>
-                <div class="about-card">
-                <p>I’m a developer who enjoys understanding how things work under the hood. My journey in Computer Science spans everything from analyzing multi-server runtime logs and relational database schemas to designing mobile and web applications with seamless user experiences. Along the way, I've had the opportunity to intern as an AI Data Analyst, earn recognition as a Star Performer in Flutter development, and build real-time event-driven streaming pipelines. When I’m not writing SQL queries or tuning application state, I’m experimenting with generative AI prompt workflows and modern database architectures.</p>                
-                </div>
-             </section>
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
 
-             <section id="hobbies">
-                <h2>My Hobbies</h2>
-                <div class="hobby-box">
-                    <div class="hobby-item">  Playing Guitar</div>
-                    <div class="hobby-item">  Listening Music</div>
-                    <div class="hobby-item">  Watching Animes</div>
-                    <div class="hobby-item">  Coding</div>
-                </div>
-             </section>
+        <div class="skill-group">
+          <h3 class="skill-group-title">Data & Analytics</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-dot dot-purple"></span>Python</div>
+            <div class="skill-item"><span class="skill-dot dot-purple"></span>SQL</div>
+            <div class="skill-item"><span class="skill-dot dot-purple"></span>PowerBI</div>
+            <div class="skill-item"><span class="skill-dot dot-purple"></span>Tableau</div>
+            <div class="skill-item"><span class="skill-dot dot-purple"></span>Excel</div>
+            <div class="skill-item"><span class="skill-dot dot-purple"></span>Pandas</div>
+          </div>
+        </div>
 
-             <section id="skills">
-                <h2>My Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-box">HTML</div>
-                    <div class="skill-box">CSS</div>
-                    <div class="skill-box">JavaScript</div>
-                    <div class="skill-box">Python</div>
-                    <div class="skill-box">Excel</div>
-                    <div class="skill-box">SQL</div>
-                    <div class="skill-box">PowerBI</div>
-                    <div class="skill-box">Tableau</div>
-                    <div class="skill-box">Git</div>
-                </div>
-             </section>
+        <div class="skill-group">
+          <h3 class="skill-group-title">Web Development</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-dot dot-blue"></span>HTML5</div>
+            <div class="skill-item"><span class="skill-dot dot-blue"></span>CSS3</div>
+            <div class="skill-item"><span class="skill-dot dot-blue"></span>JavaScript</div>
+            <div class="skill-item"><span class="skill-dot dot-blue"></span>REST APIs</div>
+            <div class="skill-item"><span class="skill-dot dot-blue"></span>Responsive Design</div>
+          </div>
+        </div>
 
-             <section id="projects">
-                <h2>My Projects</h2>
-                <div class="projects-grid">
+        <div class="skill-group">
+          <h3 class="skill-group-title">Mobile & Tools</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-dot dot-green"></span>Flutter</div>
+            <div class="skill-item"><span class="skill-dot dot-green"></span>Dart</div>
+            <div class="skill-item"><span class="skill-dot dot-green"></span>Git & GitHub</div>
+            <div class="skill-item"><span class="skill-dot dot-green"></span>VS Code</div>
+            <div class="skill-item"><span class="skill-dot dot-green"></span>Netlify</div>
+          </div>
+        </div>
 
-                <div class="project-box">
-                <h3>Netflix Analytics Dashboard</h3>
-                <p>Interactive Tableau dashboard analyzing Netflix content library — exploring genre trends, content ratings, release patterns and recommendation engine optimization insights.</p>
-                <a href="https://sanskar00-debug.github.io/netflix-analytics-dashboard/" target="_blank">View Dashboard</a>
-                </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title">AI & Emerging</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-dot dot-orange"></span>Prompt Engineering</div>
+            <div class="skill-item"><span class="skill-dot dot-orange"></span>Claude AI Workflows</div>
+            <div class="skill-item"><span class="skill-dot dot-orange"></span>IoT Data Pipelines</div>
+            <div class="skill-item"><span class="skill-dot dot-orange"></span>Generative AI</div>
+          </div>
+        </div>
 
-                <div class="project-box">
-                    <h3>Production Marketing Site</h3>
-                    <p>Production-ready B2B marketing site layout and mobile performance optimization case study on Anthropologie.com. Built for the Digital Heroes Qualification Task</p>
-                    <a href="https://github.com/sanskar00-debug/production-marketing-site.git" target="_blank">GitHub Repo Link📁</a>
-                    <a href="https://sanskar-digital-heroes.netlify.app/" target="_blank">View Website</a>
-                    </div>
+      </div>
+    </div>
+  </section>
 
-                <div class="project-box">
-                    <h3>Web Dev Quiz App</h3>
-                    <p>An interactive quiz app testing HTML, CSS and JavaScript knowledge - built with vanilla JS!</p>
-                    <a href="quiz/quiz.html">Try the Quiz!🧠</a>
-                </div>
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
 
-                <div class="project-box">
-                    <h3>Personal Dashboard</h3>
-                    <p>A personal dashboard featuring live clock, real-time weather, motivational quotes, todo list and quick notes - built with vanilla JavaScript and Weather API!</p>
-                    <a href="dashboard/dashboard.html">View Dashboard</a>
-                </div>
-                
-                <div class="project-box">
-                    <h3>Football Zone</h3>
-                    <p>A personalised collection of favourite player and also favourite team , player database, player statistics.</p>
-                    <a href="football-zone/index.html">Take a Look</a>
-                </div>
-                 
-                <div class="project-box">
-                    <h3>Online Retail PowerBI Analytics</h3>
-                    <p>End-to-end retail sales analysis and interactive Power BI dashboards built as part of the Tata Data Visualisation simulation on Forage.</p>
-                    <a href="https://github.com/sanskar00-debug/online-retail-powerbi-analytics.git">GitHub Repo Link📁</a>
-                    <a href="https://sanskar00-debug.github.io/online-retail-powerbi-analytics/">View Dashboard</a>
-                    </div>
+      <!-- Data & Analytics -->
+      <div class="project-category">
+        <h3 class="cat-label">📊 Data & Analytics</h3>
+        <div class="projects-row">
 
-                <div class="project-box">
-                    <h3>EcoRoute AI</h3>
-                    <p>EcoRoute AI transforms inefficient, fixed-schedule municipal waste management into an automated, data-driven system that uses real-time IoT bin data and predictive AI to dynamically optimize garbage truck routes, cutting carbon emissions by up to 30% and eliminating bin overflows.</p>
-                    <a href="https://github.com/sanskar00-debug/EcoRoute-AI.git" target="_blank">GitHub Repo Link📁</a>
-                    <a href="https://sanskar00-debug.github.io/EcoRoute-AI/" target="_blank">Project Interface</a>
-                </div>       
-              
-                
-                </div>
-             </section>
+          <div class="project-card featured">
+            <div class="project-top">
+              <span class="project-badge hackathon">🏆 Hackathon</span>
+              <div class="project-links">
+                <a href="https://github.com/sanskar00-debug/EcoRoute-AI" target="_blank">GitHub</a>
+                <a href="https://sanskar00-debug.github.io/EcoRoute-AI/" target="_blank">Live ↗</a>
+              </div>
+            </div>
+            <h4>EcoRoute AI</h4>
+            <p>Transforms fixed-schedule municipal waste management into an automated, data-driven system using real-time IoT bin data and predictive AI — cutting carbon emissions by up to 30% and eliminating bin overflows.</p>
+            <div class="project-tags">
+              <span>Python</span><span>IoT</span><span>AI</span><span>Route Optimization</span>
+            </div>
+          </div>
 
-             <section id="goals">
-                <h2>My Goals</h2>
-                <ol class="goals-list">
-                    <li>1.Deepen the Python & Machine Learning Pipeline for Data Science</li>
-                    <li>2.Publish Interactive BI Dashboards with Integrated Case Studies</li>
-                    <li>3.Expand Database Engineering with Advanced SQL & Relational Modeling</li>
-                    <li>4.Curate a Unified Public Showcase Across GitHub and LinkedIn</li>
-                </ol>
-             </section>
+          <div class="project-card">
+            <div class="project-top">
+              <span class="project-badge cert">Tata Forage</span>
+              <div class="project-links">
+                <a href="https://github.com/sanskar00-debug/online-retail-powerbi-analytics" target="_blank">GitHub</a>
+                <a href="https://sanskar00-debug.github.io/online-retail-powerbi-analytics/" target="_blank">Live ↗</a>
+              </div>
+            </div>
+            <h4>Online Retail PowerBI Analytics</h4>
+            <p>End-to-end retail sales analysis with interactive Power BI dashboards built as part of the Tata Data Visualisation simulation — covering revenue trends, customer segmentation, and regional performance.</p>
+            <div class="project-tags">
+              <span>PowerBI</span><span>Data Analysis</span><span>Exploratory Data Analysis</span>
+            </div>
+          </div>
 
-             <section id="contact">
-                <h2>Contact Me</h2>
-                <div class="contact-box">
-                    <p>Want to reach out? Let's connect!</p>
+          <div class="project-card">
+            <div class="project-top">
+              <span class="project-badge">Tableau</span>
+              <div class="project-links">
+                <a href="https://sanskar00-debug.github.io/netflix-analytics-dashboard/" target="_blank">Live ↗</a>
+              </div>
+            </div>
+            <h4>Netflix Analytics Dashboard</h4>
+            <p>Interactive Tableau dashboard analyzing the Netflix content library — exploring genre trends, content ratings, release patterns, and recommendation engine optimization insights.</p>
+            <div class="project-tags">
+              <span>Tableau</span><span>Data Visualization</span><span>Analytics</span><span>Data Fundamentals</span>
+            </div>
+          </div>
 
-                    <div class="form-group">
-                        <input
-                        type="text"
-                        id="nameInput"
-                        placeholder="Your Name"
-                        />
-                    </div>
+        </div>
+      </div>
 
-                    <div class="form-group">
-                        <input
-                        type="email"
-                        id="emailInput"
-                        placeholder="Your Email"
-                        />
-                    </div>
+      <!-- Web Development -->
+      <div class="project-category">
+        <h3 class="cat-label">💻 Web Development</h3>
+        <div class="projects-row">
 
-                    <div class="form-group">
-                        <textarea
-                        id="messageInput"
-                        placeholder="Your Message...."
-                        rows="4"
-                        ></textarea>
-                    </div>
+          <div class="project-card">
+            <div class="project-top">
+              <span class="project-badge interview">Interview Task</span>
+              <div class="project-links">
+                <a href="https://github.com/sanskar00-debug/production-marketing-site" target="_blank">GitHub</a>
+                <a href="https://sanskar-digital-heroes.netlify.app/" target="_blank">Live ↗</a>
+              </div>
+            </div>
+            <h4>Production Marketing Site</h4>
+            <p>Production-ready B2B marketing site layout and mobile performance optimization case study on Anthropologie.com — built for the Digital Heroes Qualification Task.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>Performance</span><span>B2B</span>
+            </div>
+          </div>
 
-                <p id="formMessage"></p>    
-                <button id="contactBtn">Send Message </button>
-                  </div>
-                 </section>
-        </main>
+          <div class="project-card">
+            <div class="project-top">
+              <span class="project-badge">Dashboard</span>
+              <div class="project-links">
+                <a href="https://sanskar00-debug.github.io/my-portfolio/dashboard/dashboard.html" target="_blank">Live ↗</a>
+              </div>
+            </div>
+            <h4>Personal Dashboard</h4>
+            <p>A live personal dashboard featuring a real-time clock, weather API integration, motivational quote generator, todo list, and auto-saving quick notes — built with vanilla JavaScript.</p>
+            <div class="project-tags">
+              <span>JavaScript</span><span>Weather API</span><span>localStorage</span>
+            </div>
+          </div>
 
-        <footer>
-            <p>&copy; 2026 Sanskar. All rights reserved.</p>
-        </footer>
+          <div class="project-card">
+            <div class="project-top">
+              <span class="project-badge">Interactive</span>
+              <div class="project-links">
+                <a href="https://sanskar00-debug.github.io/my-portfolio/quiz/quiz.html" target="_blank">Live ↗</a>
+              </div>
+            </div>
+            <h4>Web Dev Quiz App</h4>
+            <p>An interactive quiz testing HTML, CSS and JavaScript knowledge — with progress tracking, instant feedback, score calculation, and a restart flow. Built with vanilla JS and DOM manipulation.</p>
+            <div class="project-tags">
+              <span>JavaScript</span><span>DOM</span><span>CSS</span>
+            </div>
+          </div>
 
-        <script src="script.js"></script>
-        
-    </body>
+        </div>
+      </div>
+
+      <!-- Mobile -->
+      <div class="project-category">
+        <h3 class="cat-label">📱 Mobile Development</h3>
+        <div class="projects-row">
+
+          <div class="project-card">
+            <div class="project-top">
+              <span class="project-badge internship">⭐ Internship — Star Performer</span>
+              <div class="project-links">
+                <a href="https://github.com/Jumoke1/excelerate-mobile-team4" target="_blank">GitHub</a>
+              </div>
+            </div>
+            <h4>Excelerate Pathfinder</h4>
+            <p>A production mobile learning and tutoring platform built with Flutter and Dart during my internship at Excelerate (Saint Louis University partnership). Contributed to tutor authentication flows and dashboard features as a Star Performer.</p>
+            <div class="project-tags">
+              <span>Flutter</span><span>Dart</span><span>Mobile</span><span>Excelerate</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Certifications</h2>
+      <div class="certs-grid">
+
+        <div class="cert-card">
+          <div class="cert-icon">🏆</div>
+          <div class="cert-info">
+            <h4>Flutter Virtual Internship — Star Performer</h4>
+            <p>Excelerate & Saint Louis University</p>
+            <span class="cert-date">July 2026</span>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">🤖</div>
+          <div class="cert-info">
+            <h4>Advanced Prompt Chains for Claude AI</h4>
+            <p>Excelerate & Saint Louis University</p>
+            <span class="cert-date">July 2026</span>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">📊</div>
+          <div class="cert-info">
+            <h4>AI Powered Data Analysis — Remote Internship</h4>
+            <p>Remote Internship Program</p>
+            <span class="cert-date">August 2026</span>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">🧠</div>
+          <div class="cert-info">
+            <h4>Data Analytics with AI — AICTE | IBM SkillsBuild</h4>
+            <p>BharatCares Academic Internship</p>
+            <span class="cert-date">August 2026</span>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">📈</div>
+          <div class="cert-info">
+            <h4>Data Visualisation: Empowering Business with Effective Insights</h4>
+            <p>Tata Group — Forage</p>
+            <span class="cert-date">August 2026</span>
+          </div>
+        </div>
+
+        <div class="cert-card credly-card">
+          <div class="cert-icon">🎖️</div>
+          <div class="cert-info">
+            <h4>Digital Badges — Credly</h4>
+            <p>View all verified badges and credentials</p>
+            <a href="https://www.credly.com/users/sanskar-muneshwar" target="_blank" class="cert-link">View on Credly ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <div class="contact-wrapper">
+        <div class="contact-left">
+          <p class="contact-intro">I'm actively looking for Data Engineering and Data Analyst internship opportunities. If you're working on something interesting or just want to connect — reach out!</p>
+          <div class="contact-links">
+            <a href="mailto:sanskarmuneshwar2004@gmail.com" class="contact-item">
+              <span class="contact-icon">✉️</span>
+              <span>sanskarmuneshwar2004@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/sanskar-muneshwar-3173b6351" target="_blank" class="contact-item">
+              <span class="contact-icon">💼</span>
+              <span>linkedin.com/in/sanskar-muneshwar</span>
+            </a>
+            <a href="https://github.com/sanskar00-debug" target="_blank" class="contact-item">
+              <span class="contact-icon">🐙</span>
+              <span>github.com/sanskar00-debug</span>
+            </a>
+            <a href="https://www.credly.com/users/sanskar-muneshwar" target="_blank" class="contact-item">
+              <span class="contact-icon">🎖️</span>
+              <span>credly.com/users/sanskar-muneshwar</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-right">
+          <form class="contact-form" onsubmit="handleForm(event)">
+            <input type="text" id="nameInput" placeholder="Your name" required />
+            <input type="email" id="emailInput" placeholder="Your email" required />
+            <textarea id="msgInput" placeholder="Your message..." rows="4" required></textarea>
+            <p id="formMsg"></p>
+            <button type="submit" class="btn-primary full-width">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="mono">Sanskar Muneshwar</span>
+      <span class="subtle">Built with HTML, CSS & JavaScript · Deployed on GitHub Pages</span>
+      <span class="subtle">© 2026</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>

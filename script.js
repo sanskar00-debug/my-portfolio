@@ -1,270 +1,194 @@
-// My details
-let name = "Chikku"
-let age = 22
-let city = "Yavatmal"
-let dream = "Data Scientist"
+// ===== THEME TOGGLE =====
+const themeBtn = document.getElementById('themeBtn')
+let isLight = false
 
-// Print them nicely
-console.log(`Hi! My name is ${name}`)
-console.log(`I am ${age} years old`)
-console.log(`I am from ${city}, India`)
-console.log(`My dream is to become a ${dream}!`)
+themeBtn.addEventListener('click', () => {
+  isLight = !isLight
+  document.body.classList.toggle('light', isLight)
+  themeBtn.textContent = isLight ? '🌙' : '☀️'
+  localStorage.setItem('theme', isLight ? 'light' : 'dark')
+})
 
-// Math
-let currentYear = 2026
-let birthYear = currentYear - age
-console.log(`I was born in ${birthYear}`)
-
-// IF/ELSE - making decisions !
-let MyAge = 22
-
-if (MyAge >= 18) {
-    console.log("You are an adult! ")
-} else {
-    console.log("You are a minor ")
+// Load saved theme
+if (localStorage.getItem('theme') === 'light') {
+  isLight = true
+  document.body.classList.add('light')
+  themeBtn.textContent = '🌙'
 }
 
-// Another example
-let Marks = 85
+// ===== NAVBAR SCROLL EFFECT =====
+const navbar = document.getElementById('navbar')
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 40) {
+    navbar.style.borderBottomColor = 'rgba(188,140,255,0.15)'
+  } else {
+    navbar.style.borderBottomColor = 'var(--border)'
+  }
+})
 
-if (Marks >= 90) {
-    console.log("Grade: A+  ")
-} else if (Marks >= 80) {
-    console.log("Grade: A  ")
-} else if (Marks >= 70) {
-    console.log("Grade: B  ")
-} else if (Marks >= 60) {
-    console.log("Grade: C  ")
-} else {
-    console.log("Grade: F  ")
+// ===== ACTIVE NAV LINK =====
+const sections = document.querySelectorAll('section[id]')
+const navLinks = document.querySelectorAll('.nav-links a')
+
+window.addEventListener('scroll', () => {
+  let current = ''
+  sections.forEach(section => {
+    if (window.scrollY >= section.offsetTop - 80) {
+      current = section.getAttribute('id')
+    }
+  })
+  navLinks.forEach(link => {
+    link.style.color = ''
+    if (link.getAttribute('href') === '#' + current) {
+      link.style.color = 'var(--purple)'
+    }
+  })
+})
+
+// ===== SCROLL REVEAL =====
+const revealElements = document.querySelectorAll(
+  '.project-card, .cert-card, .skill-group, .about-grid'
+)
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1'
+      entry.target.style.transform = 'translateY(0)'
+      observer.unobserve(entry.target)
+    }
+  })
+}, { threshold: 0.1 })
+
+revealElements.forEach(el => {
+  el.style.opacity = '0'
+  el.style.transform = 'translateY(20px)'
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease'
+  observer.observe(el)
+})
+
+// ===== TYPING ANIMATION =====
+const roles = [
+  'Data Engineer',
+  'Data Analyst',
+  'Flutter Developer',
+  'AI Enthusiast',
+  'Problem Solver'
+]
+
+let roleIndex = 0
+let charIndex = 0
+let isDeleting = false
+
+const heroName = document.querySelector('.hero-roles')
+const typingEl = document.createElement('span')
+typingEl.className = 'role-tag'
+typingEl.id = 'typingRole'
+
+// Find first role-tag and make it the typing element
+const firstRoleTag = heroName.querySelector('.role-tag')
+if (firstRoleTag) {
+  firstRoleTag.id = 'typingRole'
 }
 
-// Your marks from your real subject!
-let tocMarks = 50
-let ooadMarks = 52
+function typeRole() {
+  const currentRole = roles[roleIndex]
+  const typingTarget = document.getElementById('typingRole')
+  if (!typingTarget) return
 
-if (tocMarks >= 50) {
-    console.log(`TOC: Passed  (${tocMarks} marks)`)
-} else {
-    console.log(`TOC: Failed  (${tocMarks} marks)`)
+  if (isDeleting) {
+    typingTarget.textContent = currentRole.substring(0, charIndex - 1)
+    charIndex--
+  } else {
+    typingTarget.textContent = currentRole.substring(0, charIndex + 1)
+    charIndex++
+  }
+
+  if (!isDeleting && charIndex === currentRole.length) {
+    setTimeout(() => { isDeleting = true }, 1800)
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false
+    roleIndex = (roleIndex + 1) % roles.length
+  }
+
+  const speed = isDeleting ? 60 : 100
+  setTimeout(typeRole, speed)
 }
 
-// Function 1 - introduce yourself
-function introduce() {
-    let name = "Sanskar"
-    let city = "Yavatmal"
-    let dream = "Data Scientist"
-    console.log(`Hi! I'm ${name} from ${city}`)
-    console.log(`I want to become a ${dream}!`)
+setTimeout(typeRole, 800)
+
+// ===== CONTACT FORM =====
+function handleForm(e) {
+  e.preventDefault()
+  const name    = document.getElementById('nameInput').value.trim()
+  const email   = document.getElementById('emailInput').value.trim()
+  const msg     = document.getElementById('msgInput').value.trim()
+  const formMsg = document.getElementById('formMsg')
+
+  if (!name) {
+    formMsg.textContent = '❌ Please enter your name!'
+    formMsg.style.color = '#f87171'
+    return
+  }
+  if (!email || !email.includes('@')) {
+    formMsg.textContent = '❌ Please enter a valid email!'
+    formMsg.style.color = '#f87171'
+    return
+  }
+  if (!msg) {
+    formMsg.textContent = '❌ Please write a message!'
+    formMsg.style.color = '#f87171'
+    return
+  }
+
+  formMsg.textContent = `✅ Thanks ${name}! I'll get back to you soon.`
+  formMsg.style.color = '#4ade80'
+
+  document.getElementById('nameInput').value  = ''
+  document.getElementById('emailInput').value = ''
+  document.getElementById('msgInput').value   = ''
+
+  setTimeout(() => { formMsg.textContent = '' }, 4000)
 }
 
-introduce()
-
-// Function 2 - grade calculator
-function getGrade(marks) {
-    if (marks >= 90) {
-        return "A+"
-    } else if (marks >= 80) {
-        return "A"
-    } else if (marks >= 70) {
-        return "B"
-    } else if (marks >= 60) {
-        return "C"
+// ===== STAT COUNTER ANIMATION =====
+function animateCounter(el, target) {
+  let current = 0
+  const increment = target / 40
+  const timer = setInterval(() => {
+    current += increment
+    if (current >= target) {
+      el.textContent = target + (el.dataset.suffix || '+')
+      clearInterval(timer)
     } else {
-        return "D"
+      el.textContent = Math.floor(current) + (el.dataset.suffix || '+')
     }
+  }, 40)
 }
 
-console.log(`OOAD: ${getGrade(50)}`)
-console.log(`TOC: ${getGrade(72)}`)
-console.log(`Maths: ${getGrade(85)}`)
-
-// Function 3 - check if passed
-function isPassed(marks) {
-    if (marks >= 40) {
-        return "Passed  "
-    } else {
-        return "Failed  "
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const nums = entry.target.querySelectorAll('.stat-num')
+      nums.forEach(num => {
+        const val = parseInt(num.textContent)
+        if (!isNaN(val)) animateCounter(num, val)
+      })
+      statsObserver.unobserve(entry.target)
     }
-}
-console.log(isPassed(45))
-console.log(isPassed(72))
+  })
+}, { threshold: 0.5 })
 
-// ARRAYS - My Actual Skills!
-let mySkills = ["HTML", "CSS", "JavaScript", "Python", "Flutter", "SQL", "Excel", "PowerBI", "Git"]
+const heroStats = document.querySelector('.hero-stats')
+if (heroStats) statsObserver.observe(heroStats)
 
-console.log("My skills:")
-console.log(mySkills)
-console.log(`I have ${mySkills.length} skills!`)
-console.log(`First skill: ${mySkills[0]}`)
-console.log(`Last skill: ${mySkills[mySkills.length - 1]}`)
-
-// Add a new skill
-mySkills.push("Tableau")
-console.log(`Added Tableau! Now I have ${mySkills.length} skills!`)
-
-// Check if Python exists
-console.log(`Do I know Python? ${mySkills.includes("Python")}`)
-
-// LOOPS - Doing Things Repeatedly!
-for (let i=0; i < 5; i++) {
-    console.log(`Count: ${1}`)
-}
-
-// Loop Through an ARRAY:
-let hobbies = ["Cricket", "Football", "Movies", "Coding"]
-
-for (let i = 0; i < hobbies.length; i++) {
-    console.log(`Hobby ${i + 1}: ${hobbies[i]}`)
-}
-
-// For each
-let skills = ["HTML", "CSS", "JavaScript"]
-
-skills.forEach(function(skill) {
-    console.log(`I know ${skill}!`)
-})
-
-// WHILE Loop 
-let hungry = true
-let cookiesEaten = 0
-
-while (hungry) {
-    cookiesEaten++
-    console.log(`Eating cookie #${cookiesEaten} `)
-    if (cookiesEaten === 3) {
-        hungry = false
+// ===== SMOOTH SCROLL FOR NAV =====
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'))
+    if (target) {
+      e.preventDefault()
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
-}
-console.log("Full now! ")
-
-// Your real subjects and marks!
-let subjects = ["OOAD", "TOC", "Distributed Ledger", "Professional Ethics", "Wireless Sensor Network"]
-let marks = [50,52,45,42,47]
-
-// Loop through and show results
-for (let i = 0; i< subjects.length; i++) {
-    let grade = getGrade(marks[i])
-    let status = isPassed(marks[i])
-    console.log(`${subjects[i]}: ${marks[i]} marks Grade ${grade}  ${status}`)
-}
-
-// ===== DOM MANIPULATION =====
-
-// 1. Find elements
-let title = document.getElementById("mainTitle")
-let tagline = document.getElementById("tagline")
-let btn = document.getElementById("contactBtn")
-
-// 2. Read what's there
-console.log(title.innerText)
-console.log(tagline.innerText)
-
-// 3. CHANGE the text
-title.innerText = " Hi, I'm Sanskar Muneshwar"
-
-// 4. CHANGE the style
-title.style.color = "#58a6ff"
-title.style.fontSize = "48px"
-
-// 5. CHANGE background color
-document.body.style.backgroundColor = "#1a1a2e"
-
-// Make button react to clicks!
-btn.addEventListener("click", function() {
-    alert("Thanks for clicking!  I'll contact you soon! 🙂 ")
+  })
 })
-
-let darkModeBtn = document.getElementById("darkModeBtn")
-let isDark = false
-
-darkModeBtn.addEventListener("click", function() {
-    if (isDark === false) {
-        // Turn ON dark mode
-        document.body.style.backgroundColor = "#1a1a2e"
-        document.body.style.color = "white"
-        darkModeBtn.innerText = "🌞 Light Mode"
-        isDark = true
-    } else {
-        // Turn OFF dark mode 
-        document.body.style.backgroundColor = "#f0f4f8"
-        document.body.style.color = "#333"
-        darkModeBtn.innerText = "🌙 Dark Mode"
-        isDark = false
-    }
-})
-
-// Click to reveal a fun fact about yourself!
-let aboutTitle = document.getElementById("mainTitle")
-
-aboutTitle.addEventListener("click", function(){
-    aboutTitle.innerText = " 🅾sanskarrr.00"
-    aboutTitle.style.color = "#fff"
-})
-
-// ===== FORM HANDLING =====
-
-let nameInput = document.getElementById("nameInput")
-let emailInput = document.getElementById("emailInput")
-let messageInput = document.getElementById("messageInput")
-let formMessage = document.getElementById("formMessage")
-let contactBtn = document.getElementById("contactBtn")
-
-// Real-time Validation as user types
-nameInput.addEventListener("input", function() {
-    if (nameInput.value.length > 0) {
-        nameInput.style.borderColor = "#58a6ff"
-    } else {
-        nameInput.style.borderColor = "#30363d"
-    }
-})
-
-emailInput.addEventListener("input", function() {
-    if (emailInput.value.includes("@")) {
-        emailInput.style.borderColor = "#3fb950"
-    } else {
-        emailInput.style.borderColor = "#f85149"
-    }
-})
-
-// Form Submission
-contactBtn.addEventListener("click", function() {
-    let name = nameInput.value.trim()
-    let email = emailInput.value.trim()
-    let message = messageInput.value.trim()
-
-    // Check if fields are empty
-    if (name === "") {
-        formMessage.innerText = "❌ Please enter your name!"
-        formMessage.style.color = "#f85149"
-        nameInput.focus()
-        return
-    } 
-     if (email === "" || !email.includes("@")) {
-        formMessage.innerText = "❌ Please enter a valid email"
-        formMessage.style.color = "#f85149"
-        emailInput.focus()
-        return
-     }
-     if (message === "") {
-        formMessage.innerText = "❌ Please write a message!"
-        formMessage.style.color = "f85149"
-        messageInput.focus()
-        return
-     }
-
-     // All fields Valid!
-     formMessage.innerText = `✅ Thanks ${name}! Message sent Successfully!`
-     formMessage.style.color = "#3fb950"
-
-     // Clear the form
-     nameInput.value = ""
-     emailInput.value = ""
-     messageInput.value = ""
-
-     // Reset border colors
-     nameInput.style.borderColor = "#30363d"
-     emailInput.style.borderColor = "#30363d"
-})
-
-
